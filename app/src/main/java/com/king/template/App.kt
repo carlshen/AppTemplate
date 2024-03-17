@@ -16,9 +16,6 @@ import com.orhanobut.logger.PrettyFormatStrategy
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.MaterialHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
-import com.tencent.bugly.Bugly
-import com.tencent.bugly.beta.Beta
-import com.tencent.bugly.crashreport.CrashReport
 import dagger.hilt.android.HiltAndroidApp
 import es.dmoral.toasty.Toasty
 import timber.log.Timber
@@ -44,20 +41,20 @@ class App : Application() {
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         MultiDex.install(base)
-        Beta.installTinker()
+//        Beta.installTinker()
     }
 
     override fun onCreate() {
         super.onCreate()
         initLogger()
         KVCache.initialize(this)
-        Bugly.init(this, Constants.BUGLY_APP_ID, BuildConfig.DEBUG)
+//        Bugly.init(this, Constants.BUGLY_APP_ID, BuildConfig.DEBUG)
 
         Toasty.Config.getInstance().allowQueue(false).apply()
 
-        NeverCrash.init { t, e ->
-            CrashReport.postCatchedException(e)
-        }
+//        NeverCrash.init { t, e ->
+//            CrashReport.postCatchedException(e)
+//        }
         if(Constants.isDomain){// 提供动态切换环境
             if(BaseUrlManager.getInstance().count == 0){
                 BaseUrlManager.getInstance().urlInfo = UrlInfo(Constants.BASE_URL)

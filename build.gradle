@@ -18,7 +18,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$versions.daggerHilt"
 
-        classpath "com.tencent.bugly:tinker-support:$versions.tinkerSupport"
+//        classpath "com.tencent.bugly:tinker-support:$versions.tinkerSupport"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -46,5 +46,5 @@ task clean(type: Delete) {
 ext {
     signingEnabled = false
 
-    tinkerEnabled = false
+//    tinkerEnabled = false
 }
