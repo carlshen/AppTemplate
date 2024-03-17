@@ -152,13 +152,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$versions.glide"
     kapt "com.github.bumptech.glide:compiler:$versions.glide"
 
-//    implementation "com.tencent:mmkv:$versions.mmkv"
-
 //    implementation "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
-
-//    implementation "com.tencent.bugly:crashreport_upgrade:$versions.bugly"
-
-//    implementation "com.tencent.tinker:tinker-android-lib:$versions.tinker"
 
     implementation "androidx.multidex:multidex:$versions.multidex"
 
@@ -191,6 +185,5 @@ dependencies {
 //    debugImplementation "com.amitshekhar.android:debug-db:$versions.debugDb"
 
     implementation project(":lib-component")
-    implementation project(":lib-umeng")
 
 }
